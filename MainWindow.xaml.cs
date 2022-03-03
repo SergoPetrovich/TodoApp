@@ -27,15 +27,14 @@ namespace TodoApp
         {
             InitializeComponent();
         }
-
-        private void dgTodoList_Loaded(object sender, RoutedEventArgs e)
+                
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             _todoData = new BindingList<TodoModel>()
             {
                 new TodoModel(){Text="test"},
                 new TodoModel(){Text="Test1"}
             };
-
         }
     }
 }

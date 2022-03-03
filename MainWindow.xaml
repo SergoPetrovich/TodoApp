@@ -5,16 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TodoApp"
         mc:Ignorable="d"
-        Title="TodoApp" Height="450" Width="800">
+        Title="TodoApp" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="dgTodoList"  FontSize="18" FontWeight="Bold" Margin="10" Loaded="dgTodoList_Loaded">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="118*"/>
+            <ColumnDefinition Width="641*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dgTodoList"  FontSize="18" FontWeight="Bold" Margin="10,10,10,10" Loaded="dgTodoList_Loaded" Grid.ColumnSpan="3">
             <DataGrid.Columns>
                 <DataGridTextColumn IsReadOnly="False" Header="CreationDate" Width="180"/>
                 <DataGridCheckBoxColumn IsReadOnly="True" Header="Done" Width="80"/>
                 <DataGridTextColumn IsReadOnly="True" Header="Todo" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-                  
-        
+
+
     </Grid>
 </Window>
